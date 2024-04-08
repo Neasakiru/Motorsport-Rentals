@@ -1,10 +1,12 @@
+import FrontPage from '../components/front-page'
 import './App.css'
+
 
 function App() {
 
   return (
     <>
-      <h1>Vite + React</h1>
+      <FrontPage/>
     </>
   )
 }
