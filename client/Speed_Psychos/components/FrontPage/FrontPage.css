@@ -14,3 +14,6 @@ main {
   justify-content: center;
   align-items: center;
 }
+img {
+  height: 6rem;
+}
