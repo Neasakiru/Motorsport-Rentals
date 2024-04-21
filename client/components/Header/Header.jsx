@@ -6,13 +6,13 @@ function Header() {
       <div id="logo">Logo</div>
       <div className="links">
         <a href="" className="models">
-          CARS
+          <span>Samochody</span>
         </a>
         <a href="" className="about">
-          ABOUT
+          <span>O nas</span>
         </a>
         <a href="" className="login">
-          Zaloguj się
+          <span>Zaloguj się</span>
         </a>
       </div>
     </nav>

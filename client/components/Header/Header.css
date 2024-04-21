@@ -13,6 +13,9 @@ nav {
   width: 30vw;
 }
 .links a {
-  text-decoration: none;
   color: #ffffff;
+  text-decoration: none;
+}
+.links a:hover{
+ border-bottom: #ffffff solid 1px;
 }
