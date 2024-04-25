@@ -17,3 +17,14 @@ main {
 img {
   height: 6rem;
 }
+
+.test {
+  background-color: black;
+  height: 100vh;
+  width: 100vw;
+}
+.test2 {
+  background-color: yellow;
+  height: 100vh;
+  width: 100vw;
+}
