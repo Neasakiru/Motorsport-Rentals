@@ -6,18 +6,15 @@ main {
   background-image: url(../content/koenigsegg_jesko_car_2_4k_hd_cars.jpg);
   background-size: cover;
 }
-.car-model-name {
-  width: 40vw;
-  height: 20vh;
-  margin: 2rem;
+.name-banner {
+  max-width: 80%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 img {
   height: 6rem;
 }
-
 .test {
   background-color: black;
   height: 100vh;
