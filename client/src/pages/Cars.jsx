@@ -4,6 +4,7 @@ function Cars() {
   return (
     <>
       <Navbar />
+      asdasd
     </>
   );
 }
