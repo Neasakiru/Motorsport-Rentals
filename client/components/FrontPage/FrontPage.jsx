@@ -5,20 +5,18 @@ import { Link } from "react-router-dom";
 function FrontPage() {
   return (
     <>
-      <main>
+      <div className="frontpage-main">
         <Navbar />
         <div className="frontpage">
           <div className="name-banner">
             <img src="https://mainwebstorage.blob.core.windows.net/mediacontainers/2022-04/KE_Logo_Jesko_White_-01-01-01-01.svg" />
             <span>Koenigsegg</span>
-            <div className="discover">
-              <Link to="/models/jesko">Odkryj</Link>
-            </div>
+            <Link className="discover" to="/models/jesko">
+              Odkryj
+            </Link>
           </div>
         </div>
-      </main>
-      <div className="test"></div>
-      <div className="test2"></div>
+      </div>
     </>
   );
 }
