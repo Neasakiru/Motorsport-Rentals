@@ -1,35 +1,62 @@
 .description-main {
   height: 100vh;
   width: 100vw;
-}
-.items {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+}
+.description-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  position: relative;
-  top: 55%;
-  right: 50%;
-  transform: translate(50%, -50%);
+  max-width: 70%;
+  text-align: center;
+  gap: 3rem;
+}
+.description-span {
   font-size: 1.5rem;
 }
-.item {
+.description-links {
   display: flex;
-  justify-content: center;
   align-items: center;
-  width: 80%;
-  height: 300px;
+  justify-content: center;
+  flex-direction: row;
+  gap: 15px;
 }
-.img {
-  height: 200px;
-  width: 300px;
-  border-radius: 8px;
+.description-links a {
+  width: 400px;
+  height: 500px;
+  color: #fff;
+  margin: 1rem;
+  text-decoration: none;
 }
-.img-1 {
-  background-image: url(../content/quatermilerace.jpg);
+#cars {
+  background-image: url("../content/porsche-link.png");
+  background-size: contain;
+}
+#about {
+  background-image: url("../content/about-link.png");
   background-size: cover;
 }
-.img-2 {
-  background-image: url(../content/engine.png);
-  background-size: cover;
+.description-links a .overlay {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+.description-links a .overlay:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.description-links a .overlay .content {
+  height: 15%;
+  width: 100%;
+  text-align: left;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.description-links a .title {
+  font-size: 1.1rem;
 }

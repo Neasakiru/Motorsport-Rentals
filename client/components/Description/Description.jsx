@@ -1,23 +1,36 @@
 import "./Description.css";
+import { Link } from "react-router-dom";
 
 function Description() {
   return (
     <>
       <div className="description-main">
-        <div className="items">
-          <div className="item">
-            <div className={"img img-1"}></div>
-            <span>Poznaj namiastkę życia na ćwierć mili.</span>
+        <div className="description-content">
+          <span className="description-span">- SpeedPsychos -</span>
+          <div className="description-div">
+            SpeedPsychos oferuje wynajem ekskluzywnych samochodów sportowych i
+            egzotycznych. Nasza flota obejmuje najnowsze modele, zapewniając
+            klientom niezapomniane chwile za kierownicą. Profesjonalna obsługa i
+            bezpieczeństwo gwarantowane. Doświadcz mocy i elegancji na drodze z
+            Velocity Motorsport Rentals.
           </div>
-          <div className="item">
-            <span>Odkryj moc skrytą po maskami bestii.</span>
-            <div className={"img img-2"}></div>
-          </div>
-          <div className="item">
-            <span>
-              Wybierz jedną z egzotycznych maszyn i wkrocz do świata
-              motoryzacji.
-            </span>
+          <div className="description-links">
+            <Link id="cars" to="/cars">
+              <div className="overlay">
+                <div className="content">
+                  <span className="title">Samochody</span>
+                  <span>Poznaj naszą flotę!</span>
+                </div>
+              </div>
+            </Link>
+            <Link id="about" to="/about">
+              <div className="overlay">
+                <div className="content">
+                  <span className="title">O nas</span>
+                  <span>Dowiedz się więcej na temat naszej działalności!</span>
+                </div>
+              </div>
+            </Link>
           </div>
         </div>
       </div>
