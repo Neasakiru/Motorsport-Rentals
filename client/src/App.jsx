@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import LoginPage from "./pages/LoginPage";
 import JeskoPage from "./models/JeskoPage";
+import PorschePage from "./models/PorschePage";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             <Route path="/about" element={<AboutPage />} exact />
             <Route path="/login" element={<LoginPage />} exact />
             <Route path="/models/jesko" element={<JeskoPage />} exact />
+            <Route path="/models/911" element={<PorschePage />} exact />
           </Routes>
         </div>
       </Router>

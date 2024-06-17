@@ -1,0 +1,17 @@
+.carnav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+.carnav .filler {
+  height: 10vh;
+}
+
+.carnav a {
+  height: 40vh;
+  width: 95vw;
+  background-color: aqua;
+  margin: auto;
+}
