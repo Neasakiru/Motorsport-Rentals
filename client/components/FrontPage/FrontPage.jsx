@@ -11,7 +11,7 @@ function FrontPage() {
           <div className="name-banner">
             <img src="https://mainwebstorage.blob.core.windows.net/mediacontainers/2022-04/KE_Logo_Jesko_White_-01-01-01-01.svg" />
             <span>Koenigsegg</span>
-            <Link className="discover" to="/models/jesko">
+            <Link className="discover" to="cars/models/jesko">
               Odkryj
             </Link>
           </div>

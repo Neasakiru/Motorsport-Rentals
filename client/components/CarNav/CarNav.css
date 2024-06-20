@@ -1,17 +1,60 @@
 .carnav {
   width: 100%;
   height: 100%;
-  display: flex;
-  gap: 20px;
-  flex-direction: column;
 }
 .carnav .filler {
-  height: 10vh;
+  height: 30vh;
+  width: 100vw;
 }
-
-.carnav a {
-  height: 40vh;
-  width: 95vw;
+.carnav .models {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.carnav .models a {
+  height: 600px;
+  width: 550px;
   background-color: aqua;
-  margin: auto;
+  text-decoration: none;
+}
+.carnav .models a .overlay {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, #000000 0%, #ffffff00 50%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.carnav .models a .overlay:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.carnav .models a .overlay .content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 20%;
+  width: 80%;
+  color: #fff;
+  font-size: 1.3rem;
+  border-bottom: solid 2px #fff;
+  margin-bottom: 40px;
+}
+.carnav .models a .overlay .content :first-child {
+  font-size: 1.7rem;
+}
+.carnav .models a .overlay .content :nth-child(2) {
+  font-size: 1rem;
+}
+#Porsche-911 {
+  background-image: url("../content/porsche.png");
+  background-size: cover;
+}
+#Jesko {
+  background-image: url("../content/koenigsegg2.png");
+  background-size: cover;
+}
+#r8 {
+  background-image: url("../content/audir8.png");
+  background-size: cover;
 }

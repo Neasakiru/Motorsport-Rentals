@@ -8,11 +8,11 @@ function Description() {
         <div className="description-content">
           <span className="description-span">- Motorsport Rentals -</span>
           <div className="description-div">
-            SpeedPsychos oferuje wynajem ekskluzywnych samochodów sportowych i
-            egzotycznych. Nasza flota obejmuje najnowsze modele, zapewniając
-            klientom niezapomniane chwile za kierownicą. Profesjonalna obsługa i
-            bezpieczeństwo gwarantowane. Doświadcz mocy i elegancji na drodze z
-            Motorsport Rentals.
+            Motorsport Rentals oferuje wynajem ekskluzywnych samochodów
+            sportowych i egzotycznych. Nasza flota obejmuje najnowsze modele,
+            zapewniając klientom niezapomniane chwile za kierownicą.
+            Profesjonalna obsługa i bezpieczeństwo gwarantowane. Doświadcz mocy
+            i elegancji na drodze z Motorsport Rentals.
           </div>
           <div className="description-links">
             <Link id="cars" to="/cars">

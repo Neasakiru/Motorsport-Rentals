@@ -6,7 +6,7 @@ function Navbar() {
     <header>
       <nav>
         <Link to="/">
-          <span className="logo">Speed Psychos</span>
+          <span className="logo">Motorsport Rentals</span>
         </Link>
         <div className="links">
           <Link to="/cars">Samochody</Link>
