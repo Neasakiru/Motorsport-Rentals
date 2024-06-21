@@ -6,6 +6,7 @@ export default function CarNav() {
     <>
       <div className="carnav">
         <div className="filler"></div>
+        <div className="title"> - DOSTĘPNE SAMOCHODY - </div>
         <div className="models">
           <Link id="Porsche-911" to="models/911">
             <div className="overlay">
