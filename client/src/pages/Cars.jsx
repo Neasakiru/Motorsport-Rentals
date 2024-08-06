@@ -5,7 +5,7 @@ function Cars() {
   return (
     <>
       <Navbar />
-      <CarNav />
+      <CarNav/>
     </>
   );
 }

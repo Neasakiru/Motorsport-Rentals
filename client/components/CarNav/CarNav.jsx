@@ -1,37 +1,18 @@
 import { Link } from "react-router-dom";
+import Car from "../../components/Car/Car"
 import "./CarNav.css";
+import "../Car/Car.css";
 
-export default function CarNav() {
+export default function CarNav(props) {
   return (
     <>
       <div className="carnav">
         <div className="filler"></div>
         <div className="title"> - DOSTĘPNE SAMOCHODY - </div>
         <div className="models">
-          <Link id="Porsche-911" to="models/911">
-            <div className="overlay">
-              <div className="content">
-                <span>PORSCHE</span>
-                <span>Carrera 911</span>
-              </div>
-            </div>
-          </Link>
-          <Link id="Jesko" to="models/jesko">
-            <div className="overlay">
-              <div className="content">
-                <span>KOENIGSEGG</span>
-                <span>Jesko</span>
-              </div>
-            </div>
-          </Link>
-          <Link id="r8" to="models/jesko">
-            <div className="overlay">
-              <div className="content">
-                <span>AUDI</span>
-                <span>R8</span>
-              </div>
-            </div>
-          </Link>
+          <Car car="Por911" name="Porsche" modelName="911" destination="models/911"/>
+          <Car car="Jesko" name="Koenigsegg" modelName="Jesko" destination="models/Jesko"/>
+          <Car car="r8" name="Audi" modelName="R8" />
         </div>
       </div>
     </>
