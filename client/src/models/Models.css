@@ -1,0 +1,19 @@
+.car{
+    height: 100vh;
+    width: 100vw;
+    background-color: aqua;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.car .spec{
+    height:100%;
+    width:50%;
+    background-color: #1e1e1eb3;
+}
+.car .hidden{
+}
+#porsche{
+    background-image: url("../../content/koenigsegg_jesko_car_2_4k_hd_cars.jpg");
+    background-size: cover;
+}

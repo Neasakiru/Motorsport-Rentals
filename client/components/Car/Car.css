@@ -1,45 +1,32 @@
-.car {
-    width: 100%;
-    height: 100%;
-  }
-  .car .models {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-  }
-  .car .models a {
-    height: 600px;
-    width: 550px;
+.button-link {
     background-color: aqua;
     text-decoration: none;
   }
-  .car .models a .overlay {
-    width: 100%;
+  .button-link .overlay {
     height: 100%;
+    width: 100%;
     background: linear-gradient(0deg, #000000 0%, #ffffff00 50%);
     display: flex;
     align-items: flex-end;
     justify-content: center;
   }
-  .car .models a .overlay:hover {
+  .button-link .overlay:hover {
     background-color: rgba(0, 0, 0, 0.3);
-  }
-  .car .models a .overlay .content {
+  } 
+  .button-link .overlay .content {
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    height: 20%;
+    gap: 5px;
     width: 80%;
     color: #fff;
     font-size: 1.3rem;
     border-bottom: solid 2px #fff;
     margin-bottom: 40px;
   }
-  .car .models a .overlay .content :first-child {
+  .button-link .overlay .content :first-child {
     font-size: 1.7rem;
   }
-  .car .models a .overlay .content :nth-child(2) {
+  .button-link .overlay .content :nth-child(2) {
     font-size: 1rem;
   }
   #Por911 {

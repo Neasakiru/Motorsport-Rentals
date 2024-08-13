@@ -4,6 +4,7 @@ function LoginPage() {
   return (
     <>
       <Navbar />
+      IN Progress
     </>
   );
 }

@@ -3,17 +3,13 @@ import "./Car.css";
 
 export default function Car(props) {
   return (
-      <div className="car">
-        <div className="models">
-          <Link id={props.car} to={props.destination}>
+          <Link id={props.id} className ="button-link" to={props.destination} style={{width: props.width, height: props.height }}>
             <div className="overlay">
-              <div className="content">
-                <span>{props.name}</span>
-                <span>{props.modelName}</span>
+              <div className="content" style={{height: props.contentHeight}}>
+                <span>{props.title}</span>
+                <span>{props.content}</span>
               </div>
             </div>
           </Link>
-        </div>
-      </div>
   );
 }
