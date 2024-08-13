@@ -1,19 +1,38 @@
-.car{
-    height: 100vh;
-    width: 100vw;
-    background-color: aqua;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+.car {
+  height: 100vh;
+  width: 100vw;
+  background-color: aqua;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
-.car .spec{
-    height:100%;
-    width:50%;
-    background-color: #1e1e1eb3;
+.car .spec {
+  height: 95vh;
+  width: 50%;
+  background-color: #1e1e1eb3;
 }
-.car .hidden{
+.car .hidden {
+  display: none;
 }
-#porsche{
-    background-image: url("../../content/koenigsegg_jesko_car_2_4k_hd_cars.jpg");
-    background-size: cover;
+.car .buttons .specButton {
+  width: 150px;
+  height: 40px;
+  background-color: #fff;
+  border: none;
+  border-radius: 20px;
+  transition: background-color 300ms;
+  text-decoration: none;
+  color: black;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.car .buttons .specButton:hover {
+  background-color: #b3b3b3;
+  cursor: pointer;
+}
+#porsche {
+  background-image: url("../../content/koenigsegg_jesko_car_2_4k_hd_cars.jpg");
+  background-size: cover;
 }

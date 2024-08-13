@@ -12,7 +12,7 @@
   max-width: 80%;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  height: 5vh;
 }
 .navbar nav a {
   color: #ffffff;

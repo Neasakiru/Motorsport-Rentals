@@ -11,17 +11,15 @@ function App() {
   return (
     <>
       <Router>
-        <div>
-          <Routes>
-            <Route path="/" element={<HomePage />} exact />
-            <Route path="/cars" element={<Cars />} exact />
-            <Route path="/about" element={<AboutPage />} exact />
-            <Route path="/login" element={<LoginPage />} exact />
-            <Route path="cars/models/911" element={<PorschePage />} exact />
-            <Route path="cars/models/Jesko" element={<JeskoPage />} exact />
-            <Route path="cars/models/r8" element={<AudiR8Page />} exact />
-          </Routes>
-        </div>
+        <Routes>
+          <Route path="/" element={<HomePage />} exact />
+          <Route path="/cars" element={<Cars />} exact />
+          <Route path="/about" element={<AboutPage />} exact />
+          <Route path="/login" element={<LoginPage />} exact />
+          <Route path="cars/models/911" element={<PorschePage />} exact />
+          <Route path="cars/models/Jesko" element={<JeskoPage />} exact />
+          <Route path="cars/models/r8" element={<AudiR8Page />} exact />
+        </Routes>
       </Router>
     </>
   );
