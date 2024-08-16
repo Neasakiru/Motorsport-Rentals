@@ -11,9 +11,12 @@ import {
   startOfToday,
   startOfWeek,
   endOfWeek,
+  isSameDay,
 } from "date-fns";
 
 function Calendar() {
+  const today = new Date();
+
   let [currentMonth, setCurrentMonth] = useState(
     format(startOfToday(), "MMM-yyyy")
   );
@@ -59,7 +62,11 @@ function Calendar() {
         {days.map((day) => (
           <button
             className={
-              !isSameMonth(day, firstDayCurrentMonth) ? "black" : "white"
+              !isSameMonth(day, firstDayCurrentMonth)
+                ? "black"
+                : !isSameDay(day, today)
+                ? "white"
+                : "today"
             }
             key={day.toString()}
           >

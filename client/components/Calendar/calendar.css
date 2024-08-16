@@ -14,14 +14,7 @@
   margin: 10px 0;
 }
 
-.calendar .days {
-  display: grid;
-  gap: 50px;
-  grid-template-rows: 30px;
-  grid-template-columns: 30px 30px 30px 30px 30px 30px 30px;
-}
-
-.calendar button {
+.calendar .header button {
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -29,6 +22,28 @@
   color: white;
 }
 
-.black {
+.calendar .header button:hover {
+  color: rgb(121, 121, 121);
+}
+
+.calendar .days {
+  display: grid;
+  gap: 50px;
+  grid-template-rows: 30px;
+  grid-template-columns: 30px 30px 30px 30px 30px 30px 30px;
+}
+
+.calendar .days button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.4rem;
+  color: white;
+}
+.calendar .days .today {
+  color: rgb(255, 0, 0);
+}
+
+.calendar .days .black {
   color: rgb(121, 121, 121);
 }
