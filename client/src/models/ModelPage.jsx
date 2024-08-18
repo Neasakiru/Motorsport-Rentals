@@ -2,10 +2,11 @@ import { useState } from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import "./Models.css";
 
-function PorschePage() {
+function ModelPage() {
   const [show, setShow] = useState(false);
 
-  return (
+  const RenderSpecs = () => {
+    return(
     <div id="porsche" className="car">
       <Navbar />
       <div className="buttons">
@@ -20,7 +21,22 @@ function PorschePage() {
         <button onClick={() => setShow(!show)}>&times</button>
       </div>
     </div>
+    )
+  }
+  const RenderForm = () => {
+    return (
+    <>
+      <div></div>
+    </>)
+  }
+
+  return (
+    <>
+      {RenderSpecs()}
+      {RenderForm()}
+    </>
+    
   );
 }
 
-export default PorschePage;
+export default ModelPage;
