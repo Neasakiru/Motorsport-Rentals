@@ -21,12 +21,14 @@ const carSchema = new Schema({
   year: Number,
 });
 
-const Car = mongoose.model("Car", carSchema);
-
-//GET - TEST
-app.get("/", (req, res) => {
-  res.send("Hello from home page!");
+const reservationSchema = newSchema({
+  name: String,
+  startDate: Date,
+  endDate: Date,
 });
+
+const Car = mongoose.model("Car", carSchema);
+const Reservation = mongoose.model("Reservation", reservationSchema);
 
 //GET - /CARS
 app.get("/cars", async (req, res) => {

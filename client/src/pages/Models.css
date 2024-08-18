@@ -36,3 +36,19 @@
   background-image: url("../../content/koenigsegg_jesko_car_2_4k_hd_cars.jpg");
   background-size: cover;
 }
+.form {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+.form-content {
+  height: 100vh;
+  width: 50%;
+}
+.form .calendar {
+  height: 100vh;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

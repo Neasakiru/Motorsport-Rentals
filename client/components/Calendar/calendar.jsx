@@ -48,6 +48,18 @@ function Calendar() {
     );
   };
 
+  const daysOfWeek = ["S", "M", "T", "W", "T", "F", "S"];
+
+  const renderDays = () => {
+    return (
+      <>
+        {daysOfWeek.map((day) => (
+          <div>{day}</div>
+        ))}
+      </>
+    );
+  };
+
   return (
     <div className="calendar">
       {renderHeader()}

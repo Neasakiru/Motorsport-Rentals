@@ -11,7 +11,6 @@ function Navbar() {
         <div className="links">
           <Link to="/cars">Samochody</Link>
           <Link to="/about">O nas</Link>
-          <Link to="/login">Zaloguj się</Link>
         </div>
       </nav>
     </header>

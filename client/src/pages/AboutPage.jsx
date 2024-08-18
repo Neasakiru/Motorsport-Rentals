@@ -9,8 +9,7 @@ function AboutPage() {
       <div className="about">
         <div className="title">O nas</div>
         <div className="content">
-          <Calendar />
-          {/* <span>
+          <span>
             {" "}
             The standard Lorem Ipsum passage, used since the 1500s "Lorem ipsum
             dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -38,7 +37,7 @@ function AboutPage() {
             vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil
             molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas
             nulla pariatur?"
-          </span> */}
+          </span>
         </div>
       </div>
     </>
