@@ -1,37 +1,22 @@
 import Car from "../../components/Car/Car";
 import "./CarNav.css";
 import "../Car/Car.css";
+import axios from "axios";
+import { useState, useEffect } from "react";
 
 function CarNav() {
-  const cars = [
-    {
-      id: "Por911",
-      title: "Porsche",
-      content: "911",
-      destination: "models/911",
-      height: "600px",
-      width: "550px",
-      contentHeight: "15%",
-    },
-    {
-      id: "Jesko",
-      title: "Koenigsegg",
-      content: "Jesko",
-      destination: "models/Jesko",
-      height: "600px",
-      width: "550px",
-      contentHeight: "15%",
-    },
-    {
-      id: "r8",
-      title: "Audi",
-      content: "R8",
-      destination: "models/R8",
-      height: "600px",
-      width: "550px",
-      contentHeight: "15%",
-    },
-  ];
+  const [data, setData] = useState([]); // Initialize state to hold data
+  useEffect(() => {
+    // Fetch data on component mount
+    axios
+      .get("http://localhost:8000/cars")
+      .then((res) => {
+        setData(res.data); // Update the state with the fetched data
+      })
+      .catch((error) => {
+        console.log(error); // Log any errors that occur during the fetch
+      });
+  }, []);
 
   return (
     <>
@@ -39,16 +24,16 @@ function CarNav() {
         <div className="filler"></div>
         <div className="title"> - DOSTĘPNE SAMOCHODY - </div>
         <div className="models">
-          {cars.map((car) => (
+          {data.map((car) => (
             <Car
-              id={car.id}
-              title={car.title}
-              content={car.content}
-              destination={car.destination}
-              height={car.height}
-              width={car.width}
-              contentHeight={car.contentHeight}
-              key={car}
+              id={car.reservationId}
+              title={car.name}
+              content={car.model}
+              destination={car.url}
+              height={"600px"}
+              width={"550px"}
+              contentHeight={"15%"}
+              key={car.reservationId}
             />
           ))}
         </div>

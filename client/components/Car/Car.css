@@ -1,44 +1,43 @@
 .button-link {
-    background-color: aqua;
-    text-decoration: none;
-  }
-  .button-link .overlay {
-    height: 100%;
-    width: 100%;
-    background: linear-gradient(0deg, #000000 0%, #ffffff00 50%);
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-  }
-  .button-link .overlay:hover {
-    background-color: rgba(0, 0, 0, 0.3);
-  } 
-  .button-link .overlay .content {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    width: 80%;
-    color: #fff;
-    font-size: 1.3rem;
-    border-bottom: solid 2px #fff;
-    margin-bottom: 40px;
-  }
-  .button-link .overlay .content :first-child {
-    font-size: 1.7rem;
-  }
-  .button-link .overlay .content :nth-child(2) {
-    font-size: 1rem;
-  }
-  #Por911 {
-    background-image: url("../content/porsche.png");
-    background-size: cover;
-  }
-  #Jesko {
-    background-image: url("../content/koenigsegg2.png");
-    background-size: cover;
-  }
-  #r8 {
-    background-image: url("../content/audir8.png");
-    background-size: cover;
-  }
-  
+  background-color: aqua;
+  text-decoration: none;
+}
+.button-link .overlay {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(0deg, #000000 0%, #ffffff00 50%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.button-link .overlay:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.button-link .overlay .content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 80%;
+  color: #fff;
+  font-size: 1.3rem;
+  border-bottom: solid 2px #fff;
+  margin-bottom: 40px;
+}
+.button-link .overlay .content :first-child {
+  font-size: 1.7rem;
+}
+.button-link .overlay .content :nth-child(2) {
+  font-size: 1rem;
+}
+#P1 {
+  background-image: url("../content/porsche.png");
+  background-size: cover;
+}
+#K1 {
+  background-image: url("../content/koenigsegg2.png");
+  background-size: cover;
+}
+#A1 {
+  background-image: url("../content/audir8.png");
+  background-size: cover;
+}

@@ -3,7 +3,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import Calendar from "../../components/Calendar/calendar";
 import "./Models.css";
 
-function ModelPage() {
+function ModelPage(props) {
   const [show, setShow] = useState(false);
 
   const RenderSpecs = () => {
@@ -15,7 +15,7 @@ function ModelPage() {
             className={show ? "specButton hidden" : "specButton"}
             onClick={() => setShow(!show)}
           >
-            Osiągi
+            Osiągi {props.name}
           </button>
         </div>
         <div className={show ? "spec" : "spec hidden"}>
