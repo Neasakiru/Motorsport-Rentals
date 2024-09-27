@@ -1,4 +1,4 @@
-import Car from "../../components/Car/Car";
+import Car from "../Car/Car";
 import "./CarNav.css";
 import "../Car/Car.css";
 import axios from "axios";

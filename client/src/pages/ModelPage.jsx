@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Navbar from "../../components/Navbar/Navbar";
-import Calendar from "../../components/Calendar/calendar";
+import Navbar from "../components/Navbar/Navbar";
+import Calendar from "../components/Calendar/calendar";
 import "./Models.css";
 
 function ModelPage(props) {
