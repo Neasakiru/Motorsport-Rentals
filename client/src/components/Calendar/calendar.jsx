@@ -1,6 +1,5 @@
-// src/Calendar.js
 import React, { useState } from "react";
-import "./calendar.css";
+import "./Calendar.css";
 import {
   add,
   eachDayOfInterval,

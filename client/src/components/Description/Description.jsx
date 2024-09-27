@@ -1,5 +1,6 @@
 import "./Description.css";
-import Car from "../Car/Car";
+import Car from "../Button/Button";
+import Button from "../Button/Button";
 
 function Description() {
   return (
@@ -17,7 +18,7 @@ function Description() {
           </div>
         </div>
         <div className="links">
-          <Car
+          <Button
             id="cars"
             title="Samochody"
             content="Poznaj naszą flotę"
@@ -26,7 +27,7 @@ function Description() {
             width="700px"
             contentHeight="25%"
           />
-          <Car
+          <Button
             id="about"
             title="O nas"
             content="Dowiedz się więcej na temat naszej działalności!"

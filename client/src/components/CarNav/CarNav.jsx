@@ -1,6 +1,6 @@
-import Car from "../Car/Car";
+import Button from "../Button/Button";
 import "./CarNav.css";
-import "../Car/Car.css";
+import "../Button/Button.css";
 import axios from "axios";
 import { useState, useEffect } from "react";
 
@@ -25,7 +25,7 @@ function CarNav() {
         <div className="title"> - DOSTĘPNE SAMOCHODY - </div>
         <div className="models">
           {data.map((car) => (
-            <Car
+            <Button
               id={car.reservationId}
               title={car.name}
               content={car.model}

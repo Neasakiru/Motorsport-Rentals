@@ -1,6 +1,5 @@
 import Navbar from "../components/Navbar/Navbar";
 import "./AboutPage.css";
-import Calendar from "../components/Calendar/calendar";
 
 function AboutPage() {
   return (
