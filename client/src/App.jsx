@@ -31,7 +31,7 @@ function App() {
           <Route
             key={e._id} // Use a unique key for each Route
             path={`cars/${e.url}`}
-            element={<ModelPage name={e.name} />}
+            element={<ModelPage name={e.name} background={e.modelBackground} />}
           />
         ))}
       </Routes>

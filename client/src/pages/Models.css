@@ -33,7 +33,7 @@
   cursor: pointer;
 }
 #porsche {
-  background-image: url("../../content/koenigsegg_jesko_car_2_4k_hd_cars.jpg");
+  background-image: "url(../../content/koenigsegg_jesko_car_2_4k_hd_cars.jpg)";
   background-size: cover;
 }
 .form {

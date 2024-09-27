@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Navbar from "../components/Navbar/Navbar";
-import Calendar from "../components/Calendar/Calendar";
+import Calendar from "../components/Calendar/calendar";
 import "./Models.css";
 
 function ModelPage(props) {
@@ -8,7 +8,13 @@ function ModelPage(props) {
 
   const RenderSpecs = () => {
     return (
-      <div id="porsche" className="car">
+      <div
+        className="car"
+        style={{
+          backgroundImage: `url(../../content/${props.background})`,
+          backgroundSize: "Cover",
+        }}
+      >
         <Navbar />
         <div className="buttons">
           <button

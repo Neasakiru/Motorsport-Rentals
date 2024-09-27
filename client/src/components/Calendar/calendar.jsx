@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Calendar.css";
+import "./calendar.css";
 import {
   add,
   eachDayOfInterval,
@@ -13,7 +13,7 @@ import {
   isSameDay,
 } from "date-fns";
 
-function Calendar() {
+export default function Calendar() {
   const today = new Date();
 
   let [currentMonth, setCurrentMonth] = useState(
@@ -89,5 +89,3 @@ function Calendar() {
     </div>
   );
 }
-
-export default Calendar;
