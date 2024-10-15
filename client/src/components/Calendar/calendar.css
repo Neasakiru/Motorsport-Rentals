@@ -52,10 +52,20 @@
   align-items: center;
 }
 
+.calendar .days .day:hover {
+  color: rgb(255, 0, 0);
+}
+
 .calendar .days .today {
   color: rgb(255, 0, 0);
 }
 
 .calendar .days .black {
   color: rgb(121, 121, 121);
+}
+.calendar .days .blue {
+  color: rgb(0, 81, 255);
+}
+.calendar .days .purple {
+  color: blueviolet;
 }

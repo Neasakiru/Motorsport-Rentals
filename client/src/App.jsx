@@ -14,10 +14,10 @@ function App() {
     axios
       .get("http://localhost:8000/cars")
       .then((res) => {
-        setData(res.data); // Update the state with the fetched data
+        setData(res.data);
       })
       .catch((error) => {
-        console.log(error); // Log any errors that occur during the fetch
+        console.log(error);
       });
   }, []);
 
@@ -29,7 +29,7 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         {data.map((e) => (
           <Route
-            key={e._id} // Use a unique key for each Route
+            key={e._id}
             path={`cars/${e.url}`}
             element={<ModelPage name={e.name} background={e.modelBackground} />}
           />

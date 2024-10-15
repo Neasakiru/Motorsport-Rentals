@@ -23,11 +23,10 @@ const carSchema = new Schema({
   model: String,
   year: Number,
   reservationId: String,
-  modelBackground: String,
 });
 
 const reservationSchema = new Schema({
-  name: String,
+  reservationId: String,
   startDate: Date,
   endDate: Date,
 });

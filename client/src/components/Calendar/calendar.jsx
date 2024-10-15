@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import "./calendar.css";
 import {
   add,
@@ -16,22 +17,53 @@ import {
 export default function Calendar() {
   const today = new Date();
 
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    // Fetch data on component mount
+    axios
+      .get("http://localhost:8000/reservations")
+      .then((res) => {
+        setData(res.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
+  let reservedDays = [];
+  data.forEach((e) => {
+    if (e.reservationId === "K1") {
+      eachDayOfInterval({ start: e.startDate, end: e.endDate }).forEach((e) => {
+        reservedDays.push(e.toString());
+      });
+    }
+  });
+
   let [currentMonth, setCurrentMonth] = useState(
     format(startOfToday(), "MMM-yyyy")
   );
 
+  //First day of the current month
   let firstDayCurrentMonth = parse(currentMonth, "MMM-yyyy", new Date());
 
+  //Creates an array for each day of the given interval(startDate, endDate)
   let days = eachDayOfInterval({
+    //First day of the week of the first day of current month
     start: startOfWeek(firstDayCurrentMonth),
+    //Last day of the week of the last day of the current month
     end: endOfWeek(endOfMonth(firstDayCurrentMonth)),
   });
 
+  console.log(reservedDays);
+
+  //Substract one month from the first day of this month
   function prevMonth() {
     let firstDayNextMonth = add(firstDayCurrentMonth, { months: -1 });
     setCurrentMonth(format(firstDayNextMonth, "MMM-yyyy"));
   }
 
+  //Add one month to the first day of this month
   function nextMonth() {
     let firstDayNextMonth = add(firstDayCurrentMonth, { months: 1 });
     setCurrentMonth(format(firstDayNextMonth, "MMM-yyyy"));
@@ -73,11 +105,16 @@ export default function Calendar() {
         {days.map((day) => (
           <button
             className={
+              //check if not the same month
               !isSameMonth(day, firstDayCurrentMonth)
-                ? "black"
+                ? "black day"
+                : reservedDays.includes(day.toString())
+                ? !isSameDay(day, today)
+                  ? "blue day"
+                  : "purple day"
                 : !isSameDay(day, today)
-                ? "white"
-                : "today"
+                ? "white day"
+                : "today day"
             }
             key={day.toString()}
           >
@@ -85,7 +122,6 @@ export default function Calendar() {
           </button>
         ))}
       </div>
-      <div className="days"></div>
     </div>
   );
 }
