@@ -16,7 +16,7 @@ import {
 
 export default function Calendar() {
   const today = new Date();
-
+  let reservedDays = [];
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -31,7 +31,6 @@ export default function Calendar() {
       });
   }, []);
 
-  let reservedDays = [];
   data.forEach((e) => {
     if (e.reservationId === "K1") {
       eachDayOfInterval({ start: e.startDate, end: e.endDate }).forEach((e) => {
@@ -55,7 +54,8 @@ export default function Calendar() {
     end: endOfWeek(endOfMonth(firstDayCurrentMonth)),
   });
 
-  console.log(reservedDays);
+  // Check fetched data
+  // console.log(reservedDays);
 
   //Substract one month from the first day of this month
   function prevMonth() {
@@ -79,21 +79,8 @@ export default function Calendar() {
     );
   };
 
-  const daysOfWeek = ["S", "M", "T", "W", "T", "F", "S"];
-
   const renderDays = () => {
     return (
-      <>
-        {daysOfWeek.map((day) => (
-          <div>{day}</div>
-        ))}
-      </>
-    );
-  };
-
-  return (
-    <div className="calendar">
-      {renderHeader()}
       <div className="days">
         <div>S</div>
         <div>M</div>
@@ -105,7 +92,6 @@ export default function Calendar() {
         {days.map((day) => (
           <button
             className={
-              //check if not the same month
               !isSameMonth(day, firstDayCurrentMonth)
                 ? "black day"
                 : reservedDays.includes(day.toString())
@@ -122,6 +108,13 @@ export default function Calendar() {
           </button>
         ))}
       </div>
+    );
+  };
+
+  return (
+    <div className="calendar">
+      {renderHeader()}
+      {renderDays()}
     </div>
   );
 }
