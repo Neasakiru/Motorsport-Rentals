@@ -1,13 +1,50 @@
 .calendar {
-  display: flex;
-  flex-direction: column;
+  height: 100%;
   width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
-  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+}
+.form form label {
+  font-size: 20px;
+}
+.form form input {
+  height: 40px;
+  width: 400px;
+  text-decoration: none;
+  background-color: #333333;
+  border: none;
+  color: #fff;
+}
+.form form button {
+  height: 30px;
+  width: 60px;
+  text-decoration: none;
 }
 
-.calendar .header {
+.datepicker {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.datepicker .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -15,7 +52,7 @@
   width: 500px;
 }
 
-.calendar .header button {
+.datepicker .header button {
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -23,18 +60,18 @@
   color: white;
 }
 
-.calendar .header button:hover {
-  color: rgb(121, 121, 121);
+.datepicker .header button:hover {
+  color: #797979;
 }
 
-.calendar .days {
+.datepicker .days {
   display: grid;
   gap: 50px;
   grid-template-rows: 30px;
   grid-template-columns: 30px 30px 30px 30px 30px 30px 30px;
 }
 
-.calendar .days button {
+.datepicker .days button {
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -45,27 +82,27 @@
   align-items: center;
 }
 
-.calendar .days div {
+.datepicker .days div {
   font-size: 1.4rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.calendar .days .day:hover {
-  color: rgb(255, 0, 0);
+.datepicker .days .day:hover {
+  color: #ff0000;
 }
 
-.calendar .days .today {
-  color: rgb(255, 0, 0);
+.datepicker .days .today {
+  color: #ff0000;
 }
 
-.calendar .days .black {
-  color: rgb(121, 121, 121);
+.datepicker .days .black {
+  color: #797979;
 }
-.calendar .days .blue {
-  color: rgb(0, 81, 255);
+.datepicker .days .blue {
+  color: #0051ff;
 }
-.calendar .days .purple {
+.datepicker .days .purple {
   color: blueviolet;
 }

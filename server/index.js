@@ -26,6 +26,9 @@ const carSchema = new Schema({
 });
 
 const reservationSchema = new Schema({
+  firstName: String,
+  lastName: String,
+  phoneNumber: String,
   reservationId: String,
   startDate: Date,
   endDate: Date,

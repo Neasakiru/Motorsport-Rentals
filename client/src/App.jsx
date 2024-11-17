@@ -31,7 +31,13 @@ function App() {
           <Route
             key={e._id}
             path={`cars/${e.url}`}
-            element={<ModelPage name={e.name} background={e.modelBackground} />}
+            element={
+              <ModelPage
+                name={e.name}
+                background={e.modelBackground}
+                reservationId={e.reservationId}
+              />
+            }
           />
         ))}
       </Routes>

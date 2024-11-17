@@ -6,6 +6,8 @@ import "./Models.css";
 function ModelPage(props) {
   const [show, setShow] = useState(false);
 
+  const reservationId = props.reservationId;
+
   const RenderSpecs = () => {
     return (
       <div
@@ -33,11 +35,8 @@ function ModelPage(props) {
   const RenderForm = () => {
     return (
       <>
-        <div className="form">
-          <div className="form-content"></div>
-          <div className="calendar">
-            <Calendar />
-          </div>
+        <div className="reservation">
+          <Calendar reservationId={reservationId} />
         </div>
       </>
     );
