@@ -22,6 +22,12 @@ const carSchema = new Schema({
   name: String,
   model: String,
   year: Number,
+  hp: String,
+  acceleration: String,
+  vMax: String,
+  torque: String,
+  drive: String,
+  transmission: String,
   reservationId: String,
 });
 

@@ -32,10 +32,6 @@
   background-color: #b3b3b3;
   cursor: pointer;
 }
-#porsche {
-  background-image: "url(../../content/koenigsegg_jesko_car_2_4k_hd_cars.jpg)";
-  background-size: cover;
-}
 .reservation {
   width: 100vw;
   height: 100vh;

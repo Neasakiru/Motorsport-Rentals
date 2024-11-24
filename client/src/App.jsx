@@ -33,8 +33,16 @@ function App() {
             path={`cars/${e.url}`}
             element={
               <ModelPage
+                url={e.url}
                 name={e.name}
-                background={e.modelBackground}
+                model={e.model}
+                year={e.year}
+                hp={e.hp}
+                acceleration={e.acceleration}
+                vMax={e.vMax}
+                torque={e.torque}
+                drive={e.drive}
+                transmission={e.transmission}
                 reservationId={e.reservationId}
               />
             }

@@ -13,7 +13,7 @@ function ModelPage(props) {
       <div
         className="car"
         style={{
-          backgroundImage: `url(../../content/${props.background})`,
+          backgroundImage: `url(../../content/${props.url}/Main.jpg)`,
           backgroundSize: "Cover",
         }}
       >
