@@ -27,10 +27,10 @@ function ModelPage(props) {
           className={show ? "button hidden" : "button button-absolut"}
           onClick={() => setShow(!show)}
         >
-          Specyfikacja
+          - Specyfikacja -
         </button>
         <div className={show ? "spec" : "spec hidden"}>
-          <h2>-Specyfikacja-</h2>
+          <h2>- Specyfikacja -</h2>
           <div className="content">
             <div>
               <span className="placeholder">Moc: </span>

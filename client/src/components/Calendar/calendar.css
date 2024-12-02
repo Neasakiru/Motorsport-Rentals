@@ -72,11 +72,13 @@
 }
 
 .datepicker .days button {
+  height: 30px;
+  width: 30px;
   background-color: transparent;
   border: none;
   cursor: pointer;
   font-size: 1.4rem;
-  color: white;
+  color: rgb(0, 170, 23);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,18 +92,20 @@
 }
 
 .datepicker .days .day:hover {
-  color: #ff0000;
+  color: #797979;
 }
 
 .datepicker .days .today {
-  color: #ff0000;
+  background-color: #fff;
+  border-radius: 30px;
+  color: #0044ff;
 }
 
 .datepicker .days .black {
   color: #797979;
 }
 .datepicker .days .blue {
-  color: #0051ff;
+  color: #ff0000;
 }
 .datepicker .days .purple {
   color: blueviolet;
