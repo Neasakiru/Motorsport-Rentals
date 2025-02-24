@@ -17,9 +17,136 @@
 :root::-webkit-scrollbar {
   display: none;
 }
+
 body {
   margin: 0;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+}
+
+/*Homepage*/
+.frontpanel {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  background-image: url(../content/koenigsegg_jesko_car_2_4k_hd_cars.jpg);
+  background-size: cover;
+}
+.frontpanel .overlay {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.frontpanel .overlay .content {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  gap: 20px;
+}
+.frontpanel .overlay .content span {
+  font-size: 2rem;
+}
+.frontpanel .overlay .content img {
+  height: 6rem;
+}
+.frontpanel .overlay .content .button {
+  width: 150px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 300ms;
+  text-decoration: none;
+  color: black;
+}
+.frontpanel .overlay .content .button:hover {
+  background-color: #b3b3b3;
+  cursor: pointer;
+}
+.description {
+  height: 100vh;
+  width: 100vw;
+  /* background: linear-gradient(0deg, #000000 0%, #ffffff00 20%); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.description .filler {
+  width: 100%;
+  height: 3rem;
+}
+.description .description-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 80%;
+  gap: 80px;
+}
+.description .description-main .description-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.description .description-main .description-content span {
+  font-size: 1.5rem;
+}
+.description .description-main .description-content div {
+  text-align: center;
+}
+.description .description-main .links {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 40px;
+}
+#cars {
+  background-image: url("../content/cars-link.png");
+  background-size: cover;
+}
+#about {
+  background-image: url("../content/about-link.png");
+  background-size: cover;
+}
+
+/*AboutPage*/
+.about {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.about .title {
+  font-size: 2rem;
+}
+.about .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  width: 60vw;
+  font-size: 1.4rem;
+  text-align: center;
+  flex-direction: column;
+  gap: 10px;
 }

@@ -80,10 +80,6 @@
 .car .spec .content div .placeholder {
   font-weight: 300;
 }
-.car .hidden {
-  display: none;
-}
-
 .car .button:hover {
   background-color: #b3b3b3;
   cursor: pointer;

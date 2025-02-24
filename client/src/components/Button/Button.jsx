@@ -6,7 +6,7 @@ export default function Button(props) {
     <Link
       id={props.id}
       className="button-link"
-      to={props.destination}
+      to={`/cars/${props.id}`}
       style={{ width: props.width, height: props.height }}
     >
       <div className="overlay">

@@ -25,7 +25,7 @@ export default function Calendar(props) {
   let reservedDays = [];
   const [data, setData] = useState([]);
 
-  useEffect(() => {
+  const getReservations = () => {
     axios
       .get("http://localhost:8000/reservations")
       .then((res) => {
@@ -34,6 +34,10 @@ export default function Calendar(props) {
       .catch((error) => {
         console.log(error);
       });
+  };
+
+  useEffect(() => {
+    getReservations();
   }, []);
 
   function sendPost() {

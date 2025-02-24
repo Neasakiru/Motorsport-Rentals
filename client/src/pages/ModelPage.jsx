@@ -1,85 +1,56 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Navbar from "../components/Navbar/Navbar";
 import Calendar from "../components/Calendar/calendar";
 import "./Models.css";
+import Specs from "../components/Specs/Specs";
+import { useParams } from "react-router-dom";
+import axios from "axios";
 
-function ModelPage(props) {
+function ModelPage() {
+  const { id } = useParams();
   const [show, setShow] = useState(false);
 
-  const reservationId = props.reservationId;
+  const [data, setData] = useState([]); // Initialize state to hold data
+  useEffect(() => {
+    // Fetch data on component mount
+    axios
+      .get(`http://localhost:8000/cars/${id}`)
+      .then((res) => {
+        setData(res.data); // Update the state with the fetched data
+      })
+      .catch((error) => {
+        console.log(error); // Log any errors that occur during the fetch
+      });
+  }, []);
 
-  const RenderSpecs = () => {
-    return (
+  return (
+    <>
       <div
         className="car"
         style={{
-          backgroundImage: `url(../../content/${props.url}/Main.jpg)`,
+          backgroundImage: `url(../../content/${data.url}/Main.jpg)`,
           backgroundSize: "Cover",
         }}
       >
         <Navbar />
         <div className="model">
-          <span className="span-name">{props.name}</span>
-          <span className="span-model">{props.model}</span>
-          <span className="span-year">{props.year}</span>
+          <span className="span-name">{data.name}</span>
+          <span className="span-model">{data.model}</span>
+          <span className="span-year">{data.year}</span>
         </div>
-        <button
-          className={show ? "button hidden" : "button button-absolut"}
-          onClick={() => setShow(!show)}
-        >
-          - Specyfikacja -
-        </button>
-        <div className={show ? "spec" : "spec hidden"}>
-          <h2>- Specyfikacja -</h2>
-          <div className="content">
-            <div>
-              <span className="placeholder">Moc: </span>
-              <span>{props.hp}</span>
-            </div>
-            <div>
-              <span className="placeholder">Moment Obrotowy: </span>
-              <span>{props.torque}</span>
-            </div>
-            <div>
-              <span className="placeholder">Przyspieszenie 0-100km/h:</span>
-              <span>{props.acceleration}</span>
-            </div>
-            <div>
-              <span className="placeholder">Prędkość Maksymalna:</span>
-              <span>{props.vMax}</span>
-            </div>
-            <div>
-              <span className="placeholder">Skrzynia Biegów: </span>
-              <span>{props.transmission}</span>
-            </div>
-            <div>
-              <span className="placeholder">Napęd: </span>
-              <span>{props.drive}</span>
-            </div>
-          </div>
-          <div className="button-spacer">
-            <button className="button" onClick={() => setShow(!show)}>
-              Zamknij
-            </button>
-          </div>
-        </div>
+        {!show && (
+          <button
+            className={" button button-absolut"}
+            onClick={() => setShow(true)}
+          >
+            - Specyfikacja -
+          </button>
+        )}
+        {show && <Specs car={data} show={show} setShow={setShow} />}
       </div>
-    );
-  };
-  const RenderForm = () => {
-    return (
-      <>
-        <div className="reservation">
-          <Calendar reservationId={reservationId} />
-        </div>
-      </>
-    );
-  };
-
-  return (
-    <>
-      {RenderSpecs()}
-      {RenderForm()}
+      <div className="reservation">
+        <Calendar reservationId={data.reservationId} />
+      </div>
     </>
   );
 }

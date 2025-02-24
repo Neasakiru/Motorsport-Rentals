@@ -53,7 +53,7 @@ app.get("/cars", async (req, res) => {
   }
 });
 
-//GET - /CARS
+//GET - /CARS - one car
 app.get("/cars/:id", async (req, res) => {
   try {
     const carId = req.params.id;
