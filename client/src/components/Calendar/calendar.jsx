@@ -122,6 +122,7 @@ export default function Calendar(props) {
   const renderForm = () => {
     return (
       <>
+        <div>- Rezerwacja -</div>
         <form>
           <label>Imię</label>
           <input type="text" className="first-name"></input>
@@ -133,7 +134,9 @@ export default function Calendar(props) {
           <input type="text" className="date-from"></input>
           <label>Data do</label>
           <input type="text" className="date-to"></input>
-          <button onClick={() => sendPost()}>Submit</button>
+          <div>
+            <button onClick={() => sendPost()}>Rezerwuj</button>
+          </div>
         </form>
       </>
     );

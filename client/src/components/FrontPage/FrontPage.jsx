@@ -8,9 +8,8 @@ function FrontPage() {
       <Navbar />
       <div className="overlay">
         <div className="content">
-          <img src="https://mainwebstorage.blob.core.windows.net/mediacontainers/2022-04/KE_Logo_Jesko_White_-01-01-01-01.svg" />
-          <span>Koenigsegg</span>
-          <Link className="button" to="cars/Jesko">
+          <span>Koenigsegg Jesko</span>
+          <Link className="button" to="cars/KJE1">
             Odkryj
           </Link>
         </div>
@@ -18,5 +17,4 @@ function FrontPage() {
     </div>
   );
 }
-
 export default FrontPage;

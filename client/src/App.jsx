@@ -1,8 +1,8 @@
 import AboutPage from "./pages/AboutPage";
 import Cars from "./pages/Cars";
 import HomePage from "./pages/HomePage";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ModelPage from "./pages/ModelPage";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import axios from "axios";
 import { useState, useEffect } from "react";
 

@@ -53,6 +53,18 @@ app.get("/cars", async (req, res) => {
   }
 });
 
+//GET - /CARS
+app.get("/cars/:id", async (req, res) => {
+  try {
+    const carId = req.params.id;
+    const cars = await Car.findOne({ reservationId: carId });
+    res.json(cars);
+    console.log("success");
+  } catch (error) {
+    res.status(500).send("Error retrieving cars");
+  }
+});
+
 //POST - /CARS
 app.post("/cars", async (req, res) => {
   try {

@@ -1,5 +1,4 @@
 import "./Description.css";
-import Car from "../Button/Button";
 import Button from "../Button/Button";
 
 function Description() {
